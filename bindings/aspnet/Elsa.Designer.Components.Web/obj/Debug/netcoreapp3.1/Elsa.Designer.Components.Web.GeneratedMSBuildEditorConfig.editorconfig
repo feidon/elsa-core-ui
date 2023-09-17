@@ -1,0 +1,7 @@
+is_global = true
+build_property.EnableAotAnalyzer = false
+build_property.EnableSingleFileAnalyzer = false
+build_property.EnableTrimAnalyzer = true
+build_property.IncludeAllContentForSelfExtract = 
+build_property.RootNamespace = Elsa.Designer.Components.Web
+build_property.ProjectDir = /Users/feidon/Documents/dotnet/elsa-core/src/designer/bindings/aspnet/Elsa.Designer.Components.Web/
