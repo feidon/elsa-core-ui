@@ -12,8 +12,6 @@
     "format": "prettier --write src/"
   },
   "dependencies": {
-    "@elsa-workflows/elsa-workflows-studio": "^2.12.0",
-    "monaco-editor": "^0.43.0",
     "vue": "^3.3.4"
   },
   "devDependencies": {
