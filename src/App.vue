@@ -4,44 +4,42 @@ import TheWelcome from './components/TheWelcome.vue'
 </script>
 
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
-
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-    </div>
-  </header>
-
   <main>
-    <TheWelcome />
+    <elsa-studio-root
+      server-url="https://localhost:7179/"
+      monaco-lib-path="src/assets/monaco-editor/min"
+    >
+    <!-- <elsa-studio-dashboard></elsa-studio-dashboard> -->
+      <elsa-workflow-definition-editor-screen
+        workflow-definition-id="4ecdc4d6ee3b455db6da0987ee8455d6">
+      </elsa-workflow-definition-editor-screen>
+    </elsa-studio-root>
   </main>
 </template>
 
-<style scoped>
-header {
-  line-height: 1.5;
+<!-- <style scoped> -->
+<style>
+#svg {
+  height: 100vh !important;
 }
 
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
+.workflow-settings-button {
+  display: none;
 }
 
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
+elsa-workflow-definition-editor-screen div span button {
+  display: inline-flex !important;
+  visibility: visible !important;
+  top: 20px !important;
+  right: 20px !important;
+}
 
-  .logo {
-    margin: 0 2rem 0 0;
-  }
+#option-menu {
+  display: none !important;
+}
 
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
+elsa-workflow-publish-button span button {
+  position: static !important;
+  border-radius: 0.375rem;
 }
 </style>
